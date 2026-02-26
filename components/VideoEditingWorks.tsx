@@ -49,8 +49,8 @@ const videos = [
 
 export default function VideoEditingWorks() {
   return (
-    <section className="bg-[#0e0e0e] py-20 sm:py-28 lg:py-32 w-full">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="w-full bg-[#0e0e0e] py-24">
+      <div className="w-full px-6 sm:px-10 lg:px-16 xl:px-24">
 
         {/* Heading */}
         <motion.div
