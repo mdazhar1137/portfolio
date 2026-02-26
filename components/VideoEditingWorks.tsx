@@ -50,13 +50,8 @@ const videos = [
 export default function VideoEditingWorks() {
   return (
     <section className="w-full bg-[#0e0e0e] py-24">
-      {/* Shared gutter container (THIS IS THE KEY) */}
-      <div
-        style={{
-          paddingLeft: "20px",
-          paddingRight: "20px",
-        }}
-      >
+      {/* Container controls alignment */}
+      <div className="container">
         {/* Heading */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
