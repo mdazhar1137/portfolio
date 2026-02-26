@@ -72,9 +72,9 @@ export default function VideoEditingWorks() {
         </motion.div>
 
         {/* Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 
-                gap-6 lg:gap-8 
-                px-6 lg:px-8">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3  gap-6 lg:gap-8  px-6 lg:px-8" style="
+             padding-left: 20px;
+             padding-right: 20px;
           {videos.map((v, i) => (
             <motion.div
               key={i}
