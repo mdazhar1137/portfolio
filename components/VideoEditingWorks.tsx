@@ -50,15 +50,20 @@ const videos = [
 export default function VideoEditingWorks() {
   return (
     <section className="w-full bg-[#0e0e0e] py-24">
-      {/* HARD LAYOUT WRAPPER (this is the fix) */}
-      <div className="max-w-[95rem] mx-auto px-5">
+      {/* Shared gutter container (THIS IS THE KEY) */}
+      <div
+        style={{
+          paddingLeft: "20px",
+          paddingRight: "20px",
+        }}
+      >
         {/* Heading */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-          className="mb-16 text-center max-w-3xl mx-auto"
+          className="mb-12 sm:mb-16 lg:mb-20 text-center max-w-3xl mx-auto"
         >
           <span className="text-[10px] tracking-[0.35em] uppercase text-[#c8a96e]">
             01 — Editing
@@ -82,6 +87,7 @@ export default function VideoEditingWorks() {
               viewport={{ once: true }}
               transition={{ delay: i * 0.06 }}
               whileHover={{ y: -4 }}
+              whileTap={{ scale: 0.98 }}
               className="rounded-xl overflow-hidden bg-white/[0.03] border border-white/[0.06]"
             >
               <div className="aspect-video bg-neutral-900 flex items-center justify-center text-white/30 text-xs">
