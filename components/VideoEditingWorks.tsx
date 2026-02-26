@@ -50,22 +50,14 @@ const videos = [
 export default function VideoEditingWorks() {
   return (
     <section className="w-full bg-[#0e0e0e] py-24">
-      {/* Shared gutter container (THIS IS THE KEY) */}
-      <div
-        style={{
-          paddingLeft: "20px",
-          paddingRight: "20px",
-          paddintgTop: "20px",
-          paddingBottom: "20px",
-        }}
-      >
+      <div className="w-full">
         {/* Heading */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-          className="mb-12 sm:mb-16 lg:mb-20 text-center max-w-4xl mx-auto"
+          className="mb-12 sm:mb-16 lg:mb-20 text-center max-w-3xl mx-auto"
         >
           <span className="text-[10px] tracking-[0.35em] uppercase text-[#c8a96e]">
             01 — Editing
@@ -79,34 +71,43 @@ export default function VideoEditingWorks() {
           </p>
         </motion.div>
 
-        {/* Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-          {videos.map((v, i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, y: 24 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.06 }}
-              whileHover={{ y: -4 }}
-              whileTap={{ scale: 0.98 }}
-              className="rounded-xl overflow-hidden bg-white/[0.03] border border-white/[0.06]"
-            >
-              <div className="aspect-video bg-neutral-900 flex items-center justify-center text-white/30 text-xs">
-                16:9 Thumbnail
-              </div>
+        {/* Grid with 20px side padding (exact DevTools match) */}
+        <div
+          style={{
+            paddingLeft: "20px",
+            paddingRight: "20px",
+            paddingTop: "20px",
+            paddingBottom: "20px"
+          }}
+        >
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+            {videos.map((v, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 24 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.06 }}
+                whileHover={{ y: -4 }}
+                whileTap={{ scale: 0.98 }}
+                className="rounded-xl overflow-hidden bg-white/[0.03] border border-white/[0.06]"
+              >
+                <div className="aspect-video bg-neutral-900 flex items-center justify-center text-white/30 text-xs">
+                  16:9 Thumbnail
+                </div>
 
-              <div className="p-4 sm:p-5">
-                <h3 className="text-sm sm:text-base font-semibold text-white">
-                  {v.title}
-                </h3>
-                <p className="text-xs text-white/40">{v.client}</p>
-                <span className="inline-block mt-3 text-[9px] tracking-widest uppercase text-[#c8a96e]">
-                  {v.role}
-                </span>
-              </div>
-            </motion.div>
-          ))}
+                <div className="p-4 sm:p-5">
+                  <h3 className="text-sm sm:text-base font-semibold text-white">
+                    {v.title}
+                  </h3>
+                  <p className="text-xs text-white/40">{v.client}</p>
+                  <span className="inline-block mt-3 text-[9px] tracking-widest uppercase text-[#c8a96e]">
+                    {v.role}
+                  </span>
+                </div>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
