@@ -55,6 +55,8 @@ export default function VideoEditingWorks() {
         style={{
           paddingLeft: "20px",
           paddingRight: "20px",
+          paddintgTop: "20px",
+          paddingBottom: "20px",
         }}
       >
         {/* Heading */}
