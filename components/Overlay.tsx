@@ -58,7 +58,7 @@ function TextSection({
             <h2
                 className="font-black uppercase text-white leading-none tracking-tight"
                 style={{
-                    fontSize: "clamp(2rem, 6vw, 6rem)",
+                    fontSize: "clamp(2rem, 4vw, 4rem)",
                     fontFamily: "var(--font-inter), Inter, sans-serif",
                     letterSpacing: "-0.02em",
                     textShadow: "0 4px 40px rgba(0,0,0,0.8)",
@@ -81,7 +81,7 @@ function TextSection({
             <p
                 className="text-white/60 font-light max-w-md"
                 style={{
-                    fontSize: "clamp(0.85rem, 1.6vw, 1.1rem)",
+                    fontSize: "clamp(1rem, 2vw, 1.4rem)",
                     letterSpacing: "0.04em",
                     lineHeight: 1.7,
                     textShadow: "0 2px 20px rgba(0,0,0,0.9)",
