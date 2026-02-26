@@ -58,7 +58,7 @@ export default function VideoEditingWorks() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, margin: "-100px" }}
                     transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-                    className="mb-16 flex flex-col items-center text-center"
+                    className="mb-20 flex flex-col items-center text-center max-w-3xl mx-auto"
                 >
                     <span className="text-[10px] tracking-[0.35em] uppercase text-[#c8a96e] font-light">
                         01 — Editing
