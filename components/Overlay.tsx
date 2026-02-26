@@ -122,7 +122,7 @@ export default function Overlay({ containerRef }: OverlayProps) {
             start: 0.45,
             end: 0.72,
             align: "right" as const,
-            title: "CINEMATO-\nGRAPHER",
+            title: "CINEMATOGRAPHER",
             tagline: "Framing light, movement, and mood into powerful imagery.",
             parallaxDir: 1 as const,
         },
