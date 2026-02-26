@@ -49,58 +49,53 @@ const videos = [
 
 export default function VideoEditingWorks() {
   return (
-    <section className="bg-red-600 py-20 sm:py-28 lg:py-32">
-      {/* 👆 RED BACKGROUND IS INTENTIONAL FOR DEBUG */}
+    <section className="bg-[#0e0e0e] py-20 sm:py-28 lg:py-32 w-full">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-
-        {/* DEBUG MARKER */}
-        <h1 className="text-white text-4xl text-center mb-10">
-          DEBUG: VIDEO EDITING WORKS
-        </h1>
 
         {/* Heading */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="mb-12 text-center max-w-2xl mx-auto"
+          transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+          className="mb-12 sm:mb-16 lg:mb-20 text-center max-w-3xl mx-auto"
         >
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white">
+          <span className="text-[10px] tracking-[0.35em] uppercase text-[#c8a96e]">
+            01 — Editing
+          </span>
+          <h2 className="mt-3 text-3xl sm:text-4xl lg:text-5xl font-black text-white">
             Video Editing Works
           </h2>
-          <p className="mt-4 text-white/80 text-sm">
-            Clean, responsive, centered grid test.
+          <p className="mt-4 text-white/40 text-sm max-w-lg mx-auto">
+            Story-driven edits that combine technical precision with emotional resonance.
           </p>
         </motion.div>
 
         {/* Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {videos.map((video, index) => (
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+          {videos.map((v, i) => (
             <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
+              key={i}
+              initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: index * 0.05 }}
-              className="rounded-xl overflow-hidden bg-black/80 border border-white/10"
+              transition={{ delay: i * 0.06 }}
+              whileHover={{ y: -4 }}
+              whileTap={{ scale: 0.98 }}
+              className="rounded-xl overflow-hidden bg-white/[0.03] border border-white/[0.06]"
             >
-              {/* Thumbnail */}
-              <div className="aspect-video bg-neutral-900 flex items-center justify-center text-white/40 text-sm">
+              <div className="aspect-video bg-neutral-900 flex items-center justify-center text-white/30 text-xs">
                 16:9 Thumbnail
               </div>
 
-              {/* Info */}
-              <div className="p-4">
-                <h3 className="text-white font-semibold text-sm">
-                  {video.title}
+              <div className="p-4 sm:p-5">
+                <h3 className="text-sm sm:text-base font-semibold text-white">
+                  {v.title}
                 </h3>
-                <p className="text-white/50 text-xs mt-1">
-                  {video.client}
-                </p>
-                <p className="text-white/40 text-xs mt-2">
-                  {video.role}
-                </p>
+                <p className="text-xs text-white/40">{v.client}</p>
+                <span className="inline-block mt-3 text-[9px] tracking-widest uppercase text-[#c8a96e]">
+                  {v.role}
+                </span>
               </div>
             </motion.div>
           ))}
