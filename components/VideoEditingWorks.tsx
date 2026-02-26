@@ -71,10 +71,8 @@ export default function VideoEditingWorks() {
           </p>
         </motion.div>
 
-        {/* Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 
-                gap-6 lg:gap-8 
-                px-5 lg:px-6">
+    {/* Grid */}
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 px-5 lg:px-6">
           {videos.map((v, i) => (
             <motion.div
               key={i}
