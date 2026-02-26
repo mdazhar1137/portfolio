@@ -50,7 +50,7 @@ const videos = [
 export default function VideoEditingWorks() {
   return (
     <section className="w-full bg-[#0e0e0e] py-24">
-      <div className="w-full px-4 sm:px-6 md:px-10 lg:px-16 xl:px-24 2xl:px-32">
+      <div className="w-full">
 
         {/* Heading */}
         <motion.div
@@ -72,7 +72,9 @@ export default function VideoEditingWorks() {
         </motion.div>
 
         {/* Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 px-6 lg:px-10 xl:px-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 
+                gap-6 lg:gap-8 
+                px-6 lg:px-8">
           {videos.map((v, i) => (
             <motion.div
               key={i}
