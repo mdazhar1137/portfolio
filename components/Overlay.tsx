@@ -130,7 +130,7 @@ export default function Overlay({ containerRef }: OverlayProps) {
             start: 0.68,
             end: 1.0,
             align: "center" as const,
-            title: "UX · AI · DI\nMOTION",
+            title: "UX · AI · DI · MOTION",
             tagline:
                 "Bridging creativity, technology, and storytelling into immersive experiences.",
             parallaxDir: -1 as const,
