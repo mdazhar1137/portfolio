@@ -76,8 +76,8 @@ export default function VideoEditingWorks() {
           style={{
             paddingLeft: "20px",
             paddingRight: "20px",
-            paddingBottom: "20px",
-            paddingtop: "20px",
+            paddingTop: "20px",
+            paddingBottom: "20px"
           }}
         >
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
