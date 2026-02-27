@@ -95,8 +95,8 @@ export default function VideoEditingWorks() {
                 <div className="aspect-video bg-neutral-900 flex items-center justify-center text-white/30 text-xs">
                   16:9 Thumbnail
                 </div>
-
-                <div className="p-4 sm:p-5">
+                
+                <div className="p-5 sm:p-6">
                   <h3 className="text-sm sm:text-base font-semibold text-white">
                     {v.title}
                   </h3>
