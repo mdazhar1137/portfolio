@@ -47,7 +47,7 @@ export default function UXDesignWorks() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, margin: "-100px" }}
                     transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-                    className="mb-16"
+                    className="mb-12 sm:mb-16 lg:mb-20 text-center max-w-8xl mx-auto"
                 >
                     <span className="text-[10px] tracking-[0.35em] uppercase text-[#6e9fc8] font-light">
                         02 — UX &amp; Design
