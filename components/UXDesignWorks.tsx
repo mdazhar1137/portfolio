@@ -40,7 +40,7 @@ const caseStudies = [
 export default function UXDesignWorks() {
     return (
         <section className="py-32 bg-[#121212]">
-            <div className="max-w-7xl mx-auto px-6">
+            <div className="w-full">
                 {/* Heading */}
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
