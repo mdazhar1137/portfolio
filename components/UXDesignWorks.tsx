@@ -61,7 +61,7 @@ export default function UXDesignWorks() {
                     </p>
                 </motion.div>
 
-                {/* Editorial case study cards */}
+                {/* Grid with 20px side padding (exact DevTools match) */}
                 <div
                     style={{
                         paddingLeft: "20px",
