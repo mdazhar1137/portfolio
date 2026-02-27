@@ -4,11 +4,11 @@ import { motion } from "framer-motion";
 
 const videos = [
   {
-    title: "Luxury Brand Film",
-    client: "Automotive Campaign",
+    title: "Laila Moive",
+    client: "Shine Screens",
     duration: "3:24",
-    year: "2024",
-    role: "Editor · Colorist",
+    year: "2025",
+    role: "Associate Editor",
   },
   {
     title: "Documentary — Voices Unheard",
