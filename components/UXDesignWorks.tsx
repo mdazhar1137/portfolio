@@ -55,7 +55,7 @@ export default function UXDesignWorks() {
                     <h2 className="mt-3 text-4xl md:text-5xl font-black text-white tracking-tight leading-none">
                         UX &amp; Design Works
                     </h2>
-                    <p className="mt-4 text-white/40 max-w-lg text-sm leading-relaxed">
+                    <p className="mt-4 text-white/40 text-sm max-w-8xl mx-auto">
                         Human-centred design driven by research, motion craft, and
                         measurable outcomes.
                     </p>
