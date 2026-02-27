@@ -96,7 +96,7 @@ export default function VideoEditingWorks() {
                   16:9 Thumbnail
                 </div>
                 
-                <div className="pl-6 pb-6 sm:pl-6 sm:pb-6">
+                <div className="pl-[20px] pb-[20px] space-y-1.5">
                   <h3 className="text-sm sm:text-base font-semibold text-white">
                     {v.title}
                   </h3>
