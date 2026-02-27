@@ -57,7 +57,7 @@ export default function VideoEditingWorks() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-          className="mb-12 sm:mb-16 lg:mb-20 text-center max-w-4xl mx-auto"
+          className="mb-12 sm:mb-16 lg:mb-20 text-center max-w-5xl mx-auto"
         >
           <span className="text-[10px] tracking-[0.35em] uppercase text-[#c8a96e]">
             01 — Editing
@@ -65,7 +65,7 @@ export default function VideoEditingWorks() {
           <h2 className="mt-3 text-3xl sm:text-4xl lg:text-5xl font-black text-white">
             Video Editing Works
           </h2>
-          <p className="mt-4 text-white/40 text-sm max-w-4xl mx-auto">
+          <p className="mt-4 text-white/40 text-sm max-w-5xl mx-auto">
             Story-driven edits that combine technical precision with emotional
             resonance.
           </p>
