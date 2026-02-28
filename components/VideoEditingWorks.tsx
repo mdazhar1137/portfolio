@@ -110,7 +110,7 @@ export default function VideoEditingWorks() {
 
                 <div
                   className="space-y-1.5"
-                  style={{ paddingLeft: "20px", paddingBottom: "20px" }}
+                  style={{ paddingLeft: "20px", paddingTop: "20px", paddingBottom: "20px" }}
                 >
                   <h3 className="text-sm sm:text-base font-semibold text-white">
                     {v.title}
