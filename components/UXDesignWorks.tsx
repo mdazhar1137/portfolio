@@ -11,7 +11,7 @@ const caseStudies = [
     accent: "#6e9fc8",
     number: "01",
     behanceUrl:
-      "https://www.behance.net/gallery/123456789/FinTech-Mobile-Banking",
+      "https://www.behance.net/gallery/180608005/Calender-EventMeeting-Booking-Product-UX-Design",
     behanceId: "123456789",
   },
   {
