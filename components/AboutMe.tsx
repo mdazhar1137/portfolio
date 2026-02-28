@@ -96,7 +96,7 @@ export default function AboutMe() {
                     style={{ paddingLeft: "20px", paddingRight: "20px", paddingTop: "20px", paddingBottom: "20px" }}>
                     <h3
                         className="text-center text-[11px] tracking-[0.4em] uppercase text-white/40 mb-16"
-                        style={{ paddingTop: "20px", paddingBottom: "20px" }}
+                        style={{ paddingBottom: "20px" }}
                     >
                         Tools & Technologies
                     </h3>
@@ -115,8 +115,19 @@ export default function AboutMe() {
                                 key={i}
                                 className="rounded-2xl p-8 bg-white/[0.035] border border-white/[0.1]"
                             >
-                                <p className="text-lg font-semibold text-white mb-2">{title}</p>
-                                <p className="text-sm text-white/50 leading-relaxed">{tools}</p>
+                                <div
+                                    style={{
+                                        paddingTop: "20px",
+                                        paddingBottom: "20px",
+                                    }}
+                                >
+                                    <p className="text-lg font-semibold text-white mb-2">
+                                        {title}
+                                    </p>
+                                    <p className="text-sm text-white/50 leading-relaxed">
+                                        {tools}
+                                    </p>
+                                </div>
                             </div>
                         ))}
                     </div>
