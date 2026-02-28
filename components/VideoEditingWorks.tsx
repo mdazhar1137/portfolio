@@ -2,82 +2,75 @@
 
 import { motion } from "framer-motion";
 
-const videos = [
+const caseStudies = [
   {
-    title: "Laila Moive",
-    client: "Shine Screens",
-    duration: "3:24",
-    year: "2025",
-    role: "Associate Editor",
-    youtubeId: "FyhFBHpTh6Y",
+    title: "FinTech Mobile Banking",
+    brief: "Full app redesign for 2.4M users",
+    impact: "38% faster task completion · 91/100 SUS score",
+    skills: ["Research", "Wireframing", "Prototyping", "Design System"],
+    accent: "#6e9fc8",
+    number: "01",
+    behanceUrl:
+      "https://www.behance.net/gallery/180608005/Calender-EventMeeting-Booking-Product-UX-Design",
+    behanceId: "180608005",
   },
   {
-    title: "Airfryer - Commercial",
-    client: "SOLARA",
-    duration: "18:47",
-    year: "2026",
-    role: "DOP · Editor · DI · SFX",
-    youtubeId: "k9KmdB9pmAU",
+    title: "Healthcare Patient Portal",
+    brief: "Accessibility-first redesign",
+    impact: "WCAG 2.1 AA compliant · 52% support ticket reduction",
+    skills: ["UX Audit", "Accessibility", "Journey Mapping", "Handoff"],
+    accent: "#9c6ec8",
+    number: "02",
+    behanceUrl: "https://www.behance.net/gallery/223456789/Healthcare-Portal",
+    behanceId: "223456789",
   },
   {
-    title: "PODCAST",
-    client: "ACCHA TALKS",
-    duration: "2:10",
-    year: "2024",
-    role: "Editor · Motion Design · Thumbnail · SEO",
-    youtubeId: "UjleExNh810",
+    title: "E-commerce AI Recommender UI",
+    brief: "Gen AI-powered shopping experience",
+    impact: "22% uplift in basket value · Featured in UX Planet",
+    skills: ["AI/UX", "Interaction Design", "A/B Testing", "Figma"],
+    accent: "#6ec8a9",
+    number: "03",
+    behanceUrl: "https://www.behance.net/gallery/323456789/Ecommerce-AI-UI",
+    behanceId: "323456789",
   },
   {
-    title: "Nailu Nadi Cover Song",
-    client: "Sumith Bunny",
-    duration: "5×6:00",
-    year: "2023",
-    role: "Editor · DI · Title Design · Poster Design",
-    youtubeId: "YE4UPMc_-tY",
-  },
-  {
-    title: "Political Interviews",
-    client: "Bhala Media",
-    duration: "4:12",
-    year: "2020 - Present",
-    role: "Editor · Thumbnail Design",
-    youtubeId: "1ehUf4NJ-Lo",
-  },
-  {
-    title: "3D Lyrical Song",
-    client: "Mahendra Meesa",
-    duration: "1:30",
-    year: "2022",
-    role: "3D Animation · Editor · DI",
-    youtubeId: "fNZmWCZCkKM",
+    title: "Creative Studio Dashboard",
+    brief: "Internal tooling for a media agency",
+    impact: "3× workflow speed · Zero onboarding friction",
+    skills: ["Design System", "Dark Mode", "Motion Design", "Dev Handoff"],
+    accent: "#c86e9c",
+    number: "04",
+    behanceUrl: "https://www.behance.net/gallery/423456789/Studio-Dashboard",
+    behanceId: "423456789",
   },
 ];
 
-export default function VideoEditingWorks() {
+export default function UXDesignWorks() {
   return (
-    <section className="w-full bg-[#0e0e0e] py-24">
+    <section className="py-32 bg-[#121212]">
       <div className="w-full">
         {/* Heading */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
           className="mb-12 sm:mb-16 lg:mb-20 text-center max-w-8xl mx-auto"
         >
-          <span className="text-[10px] tracking-[0.35em] uppercase text-[#c8a96e]">
-            01 — Shaping Stories
+          <span className="text-[10px] tracking-[0.35em] uppercase text-[#6e9fc8] font-light">
+            02 — UX &amp; Design
           </span>
-          <h2 className="mt-3 text-3xl sm:text-4xl lg:text-5xl font-black text-white">
-            The Final Cut
+          <h2 className="mt-3 text-4xl md:text-5xl font-black text-white">
+            UX &amp; Design Works
           </h2>
-          <p className="mt-4 text-white/40 text-sm max-w-8xl mx-auto">
-            Story-driven edits that combine technical precision with emotional
-            resonance.
+          <p className="mt-4 text-white/40 text-sm">
+            Human-centred design driven by research, motion craft, and
+            measurable outcomes.
           </p>
         </motion.div>
 
-        {/* Grid with 20px side padding (exact DevTools match) */}
+        {/* Grid with 20px padding — SAME AS VIDEO SECTION */}
         <div
           style={{
             paddingLeft: "20px",
@@ -86,41 +79,83 @@ export default function VideoEditingWorks() {
             paddingBottom: "20px",
           }}
         >
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-            {videos.map((v, i) => (
-              <motion.div
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {caseStudies.map((cs, i) => (
+              <motion.a
                 key={i}
-                initial={{ opacity: 0, y: 24 }}
+                href={cs.behanceUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.06 }}
-                whileHover={{ y: -4 }}
-                whileTap={{ scale: 0.98 }}
-                className="rounded-xl overflow-hidden bg-white/[0.03] border border-white/[0.06]"
+                viewport={{ once: true, margin: "-60px" }}
+                transition={{ duration: 0.7, delay: i * 0.1 }}
+                whileHover={{ y: -6 }}
+                className="group relative rounded-2xl overflow-hidden cursor-pointer"
+                style={{
+                  background: "rgba(255,255,255,0.025)",
+                  border: "1px solid rgba(255,255,255,0.06)",
+                  backdropFilter: "blur(16px)",
+                }}
               >
-                <div className="aspect-video bg-neutral-900 overflow-hidden">
+                {/* Behance Thumbnail */}
+                <div className="aspect-[16/9] bg-black overflow-hidden">
                   <iframe
-                    className="w-full h-full"
-                    src={`https://www.youtube.com/embed/${v.youtubeId}?rel=0`}
-                    title={v.title}
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    src={`https://www.behance.net/embed/project/${cs.behanceId}`}
+                    className="w-full h-full pointer-events-none"
                     allowFullScreen
                   />
                 </div>
 
-                <div
-                  className="space-y-1.5"
-                  style={{ paddingLeft: "20px", paddingTop: "20px", paddingBottom: "20px" }}
-                >
-                  <h3 className="text-sm sm:text-base font-semibold text-white">
-                    {v.title}
-                  </h3>
-                  <p className="text-xs text-white/40">{v.client}</p>
-                  <span className="inline-block mt-3 text-[9px] tracking-widest uppercase text-[#c8a96e]">
-                    {v.role}
+                {/* Content */}
+                <div className="p-8">
+                  <span
+                    className="text-6xl font-black block mb-4"
+                    style={{ color: `${cs.accent}18` }}
+                  >
+                    {cs.number}
                   </span>
+
+                  <div
+                    className="h-px mb-6"
+                    style={{
+                      background: `linear-gradient(90deg, ${cs.accent}60, transparent)`,
+                    }}
+                  />
+
+                  <h3 className="text-xl font-bold text-white mb-2">
+                    {cs.title}
+                  </h3>
+                  <p className="text-[13px] text-white/40 mb-4">{cs.brief}</p>
+
+                  <p className="text-sm mb-5" style={{ color: cs.accent }}>
+                    ↑ {cs.impact}
+                  </p>
+
+                  <div className="flex flex-wrap gap-2">
+                    {cs.skills.map((skill) => (
+                      <span
+                        key={skill}
+                        className="text-[9px] uppercase px-2.5 py-1"
+                        style={{
+                          color: `${cs.accent}cc`,
+                          background: `${cs.accent}10`,
+                          border: `1px solid ${cs.accent}20`,
+                        }}
+                      >
+                        {skill}
+                      </span>
+                    ))}
+                  </div>
+
+                  <div
+                    className="mt-8 text-[10px] uppercase tracking-widest"
+                    style={{ color: `${cs.accent}60` }}
+                  >
+                    View on Behance →
+                  </div>
                 </div>
-              </motion.div>
+              </motion.a>
             ))}
           </div>
         </div>
