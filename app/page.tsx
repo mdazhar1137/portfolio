@@ -45,8 +45,8 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="border-t border-white/5 py-10 text-center text-sm text-white/30">
-        <p>© 2024 — Crafted with intention &amp; cinematic precision</p>
+      <footer className="border-t border-white/5 py-5 text-center text-sm text-white/30">
+        <p>© Azhar. Built with story, design & motion.</p>
       </footer>
     </main>
   );
