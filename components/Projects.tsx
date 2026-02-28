@@ -87,7 +87,7 @@ export default function Projects() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-                    className="mb-16 max-w-7xl mx-auto px-6"
+                    className="mb-16 text-center max-w-8xl mx-auto"
                 >
                     <span className="text-[10px] tracking-[0.35em] uppercase text-[#c8a96e]">
                         Featured
