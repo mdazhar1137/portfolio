@@ -165,7 +165,13 @@ export default function AboutMe() {
                     <div className="flex gap-10">
                         <a
                             href="tel:+919182494402"
-                            className="px-20 py-20 border-2 border-[#c8a96e] text-[#c8a96e] rounded-md text-xl hover:bg-[#c8a96e]/10 transition"
+                            className="border-2 border-[#c8a96e] text-[#c8a96e] rounded-md text-xl hover:bg-[#c8a96e]/10 transition"
+                            style={{
+                                paddingTop: "20px",
+                                paddingBottom: "20px",
+                                paddingLeft: "20px",
+                                paddingRight: "20px",
+                            }}
                         >
                             Call Now
                         </a>
