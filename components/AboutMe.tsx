@@ -94,7 +94,10 @@ export default function AboutMe() {
                 <div
                     className="max-w-8xl mx-auto"
                     style={{ paddingLeft: "20px", paddingRight: "20px", paddingTop: "20px", paddingBottom: "20px" }}>
-                    <h3 className="text-center text-[11px] tracking-[0.4em] uppercase text-white/40 mb-16">
+                    <h3
+                        className="text-center text-[11px] tracking-[0.4em] uppercase text-white/40 mb-16"
+                        style={{ paddingTop: "20px", paddingBottom: "20px" }}
+                    >
                         Tools & Technologies
                     </h3>
 
@@ -111,7 +114,6 @@ export default function AboutMe() {
                             <div
                                 key={i}
                                 className="rounded-2xl p-8 bg-white/[0.035] border border-white/[0.1]"
-                                paddingLeft="20px"
                             >
                                 <p className="text-lg font-semibold text-white mb-2">{title}</p>
                                 <p className="text-sm text-white/50 leading-relaxed">{tools}</p>
