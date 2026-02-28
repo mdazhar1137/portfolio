@@ -4,8 +4,8 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 
 const reels = [
-    { youtubeId: "ysEExM1EAM8" },
-    { youtubeId: "k9KmdB9pmAU" },
+    { youtubeId: "MAZmnPT3260" },
+    { youtubeId: "vjwvPFOfbjY" },
     { youtubeId: "UjleExNh810" },
     { youtubeId: "YE4UPMc_-tY" },
     { youtubeId: "1ehUf4NJ-Lo" },
