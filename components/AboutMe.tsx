@@ -167,10 +167,10 @@ export default function AboutMe() {
                             href="tel:+919182494402"
                             className="border-2 border-[#c8a96e] text-[#c8a96e] rounded-md text-xl hover:bg-[#c8a96e]/10 transition"
                             style={{
-                                paddingTop: "20px",
-                                paddingBottom: "20px",
-                                paddingLeft: "20px",
-                                paddingRight: "20px",
+                                paddingTop: "8px",
+                                paddingBottom: "8px",
+                                paddingLeft: "24px",
+                                paddingRight: "24px",
                             }}
                         >
                             Call Now
@@ -178,6 +178,12 @@ export default function AboutMe() {
                         <a
                             href="mailto:mdazhar1137@gmail.com"
                             className="px-20 py-20 border-2 border-white/40 text-white rounded-md text-xl hover:bg-white/10 transition"
+                            style={{
+                                paddingTop: "8px",
+                                paddingBottom: "8px",
+                                paddingLeft: "24px",
+                                paddingRight: "24px",
+                            }}
                         >
                             Send Email
                         </a>
