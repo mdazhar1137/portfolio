@@ -27,13 +27,13 @@ export default function CinematographyReels() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-                    className="mb-14 text-center max-w-6xl mx-auto"
+                    className="mb-14 text-center max-w-8xl mx-auto"
                 >
                     <span className="text-[10px] tracking-[0.35em] uppercase text-[#9c6ec8]">
-                        03 — Camera
+                        03 — Camera, Edit, Design
                     </span>
                     <h2 className="mt-3 text-4xl md:text-5xl font-black text-white">
-                        Cinematography Reels
+                        Recent Works
                     </h2>
                     <p className="mt-4 text-white/40 text-sm max-w-xl mx-auto">
                         Vertical visual storytelling — composed for motion, rhythm, and emotion.
