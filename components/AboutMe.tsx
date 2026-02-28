@@ -25,7 +25,7 @@ const experience = [
 export default function AboutMe() {
   return (
     <section className="py-48 bg-[#121212]">
-      <div className="max-w-6xl mx-auto px-6 space-y-44">
+      <div className="max-w-8xl mx-auto px-6 space-y-44">
 
         {/* ===== HEADING & BIO ===== */}
         <motion.div
@@ -33,7 +33,7 @@ export default function AboutMe() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
-          className="text-center max-w-4xl mx-auto"
+          className="text-center max-w-8xl mx-auto"
         >
           <span className="text-[11px] tracking-[0.45em] uppercase text-[#c8a96e]">
             04 — About
