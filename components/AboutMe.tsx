@@ -68,7 +68,7 @@ export default function AboutMe() {
                     className="max-w-8xl mx-auto"
                     style={{ paddingLeft: "20px", paddingRight: "20px", paddingTop: "20px", paddingBottom: "20px" }}
                 >
-                    <h3 className="text-center text-[11px] tracking-[0.4em] uppercase text-white/40 mb-14">
+                    <h3 className="text-center text-[16px] tracking-[0.4em] uppercase text-white/40 mb-14">
                         Experience Levels
                     </h3>
 
@@ -95,7 +95,7 @@ export default function AboutMe() {
                     className="max-w-8xl mx-auto"
                     style={{ paddingLeft: "20px", paddingRight: "20px", paddingTop: "20px", paddingBottom: "20px" }}>
                     <h3
-                        className="text-center text-[11px] tracking-[0.4em] uppercase text-white/40 mb-16"
+                        className="text-center text-[16px] tracking-[0.4em] uppercase text-white/40 mb-16"
                         style={{ paddingBottom: "20px" }}
                     >
                         Tools & Technologies
@@ -136,8 +136,11 @@ export default function AboutMe() {
                 </div>
 
                 {/* ===== WORK EXPERIENCE ===== */}
-                <div className="max-w-8xl mx-auto">
-                    <h3 className="text-center text-[11px] tracking-[0.4em] uppercase text-white/40 mb-14">
+                <div
+                    className="max-w-8xl mx-auto"
+                    style={{ paddingLeft: "20px", paddingRight: "20px", paddingTop: "20px", paddingBottom: "20px" }}
+                >
+                    <h3 className="text-center text-[16px] tracking-[0.4em] uppercase text-white/40 mb-14">
                         Work Experience
                     </h3>
 
