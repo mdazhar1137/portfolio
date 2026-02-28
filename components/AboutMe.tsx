@@ -79,7 +79,7 @@ export default function AboutMe() {
                                     <span>{skill.label}</span>
                                     <span>{skill.years} yrs</span>
                                 </div>
-                                <div className="h-[6px] bg-white/10 rounded-full overflow-hidden">
+                                <div className="h-[20px] bg-white/10 rounded-full overflow-hidden">
                                     <div
                                         className="h-full bg-[#c8a96e] rounded-full"
                                         style={{ width: `${skill.value}%` }}
