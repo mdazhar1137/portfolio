@@ -111,6 +111,7 @@ export default function AboutMe() {
                             <div
                                 key={i}
                                 className="rounded-2xl p-8 bg-white/[0.035] border border-white/[0.1]"
+                                paddingLeft="20px"
                             >
                                 <p className="text-lg font-semibold text-white mb-2">{title}</p>
                                 <p className="text-sm text-white/50 leading-relaxed">{tools}</p>
