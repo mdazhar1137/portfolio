@@ -12,7 +12,7 @@ const caseStudies = [
     number: "01",
     behanceUrl:
       "https://www.behance.net/gallery/180608005/Calender-EventMeeting-Booking-Product-UX-Design",
-    behanceId: "123456789",
+    behanceId: "180608005",
   },
   {
     title: "Healthcare Patient Portal",
