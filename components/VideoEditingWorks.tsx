@@ -44,12 +44,12 @@ const videos = [
     youtubeId: "1ehUf4NJ-Lo",
   },
   {
-    title: "Sports Brand Anthem",
-    client: "Sports Brand",
+    title: "3D Lyrical Song",
+    client: "Mahendra Meesa",
     duration: "1:30",
-    year: "2024",
-    role: "Editor · Sound Design",
-    youtubeId: "RgKAFK5djSk",
+    year: "2022",
+    role: "3D Animation · Editor · DI",
+    youtubeId: "fNZmWCZCkKM",
   },
 ];
 
