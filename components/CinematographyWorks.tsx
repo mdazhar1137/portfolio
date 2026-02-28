@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 
-cconst reels = [
+const reels = [
     { youtubeId: "ysEExM1EAM8" },
     { youtubeId: "k9KmdB9pmAU" },
     { youtubeId: "UjleExNh810" },
