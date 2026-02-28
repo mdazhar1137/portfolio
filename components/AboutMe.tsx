@@ -162,31 +162,45 @@ export default function AboutMe() {
 
                 {/* ===== CTA ===== */}
                 <div className="flex flex-col items-center gap-14 pt-16">
-                    <div className="flex gap-10">
+                    <div className="flex gap-12">
                         <a
                             href="tel:+919182494402"
-                            className="px-14 py-5 border-2 border-[#c8a96e] text-[#c8a96e] rounded-md text-base hover:bg-[#c8a96e]/10 transition"
+                            className="border-2 border-[#c8a96e] text-[#c8a96e] rounded-md text-lg hover:bg-[#c8a96e]/10 transition"
+                            style={{
+                                paddingTop: "20px",
+                                paddingBottom: "20px",
+                                paddingLeft: "20px",
+                                paddingRight: "20px",
+                            }}
                         >
                             Call Now
                         </a>
+
                         <a
                             href="mailto:mdazhar1137@gmail.com"
-                            className="px-14 py-5 border-2 border-white/40 text-white rounded-md text-base hover:bg-white/10 transition"
+                            className="border-2 border-white/40 text-white rounded-md text-lg hover:bg-white/10 transition"
+                            style={{
+                                paddingTop: "20px",
+                                paddingBottom: "20px",
+                                paddingLeft: "20px",
+                                paddingRight: "20px",
+                            }}
                         >
                             Send Email
                         </a>
                     </div>
-
-                    <div className="flex flex-wrap justify-center gap-10 text-sm text-white/50">
-                        <a href="https://www.instagram.com/mdazhar1137/" target="_blank">Instagram</a>
-                        <a href="https://www.facebook.com/mdazhar1137/" target="_blank">Facebook</a>
-                        <a href="https://twitter.com/mdazhar1137" target="_blank">Twitter</a>
-                        <a href="https://www.linkedin.com/in/md-azhar-baba-571101180/" target="_blank">LinkedIn</a>
-                        <a href="https://www.behance.net/mohdazharbaba" target="_blank">Behance</a>
-                    </div>
                 </div>
 
+                <div className="flex flex-wrap justify-center gap-10 text-sm text-white/50">
+                    <a href="https://www.instagram.com/mdazhar1137/" target="_blank">Instagram</a>
+                    <a href="https://www.facebook.com/mdazhar1137/" target="_blank">Facebook</a>
+                    <a href="https://twitter.com/mdazhar1137" target="_blank">Twitter</a>
+                    <a href="https://www.linkedin.com/in/md-azhar-baba-571101180/" target="_blank">LinkedIn</a>
+                    <a href="https://www.behance.net/mohdazharbaba" target="_blank">Behance</a>
+                </div>
             </div>
-        </section>
+
+        </div>
+        </section >
     );
 }
