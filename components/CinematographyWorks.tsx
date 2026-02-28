@@ -6,14 +6,14 @@ import { useState } from "react";
 const reels = [
     { youtubeId: "MAZmnPT3260" },
     { youtubeId: "vjwvPFOfbjY" },
-    { youtubeId: "UjleExNh810" },
-    { youtubeId: "YE4UPMc_-tY" },
-    { youtubeId: "1ehUf4NJ-Lo" },
-    { youtubeId: "fNZmWCZCkKM" },
-    { youtubeId: "dQw4w9WgXcQ" },
-    { youtubeId: "OPf0YbXqDm0" },
-    { youtubeId: "RgKAFK5djSk" },
-    { youtubeId: "l482T0yNkeo" },
+    { youtubeId: "PFOVZnj-SwA" },
+    { youtubeId: "BADUM1ZrdxA" },
+    { youtubeId: "hkjytqy09xw" },
+    { youtubeId: "EOyXgqmYz9Q" },
+    { youtubeId: "YCSFqMCCw-I" },
+    { youtubeId: "eK_bd-haY58" },
+    { youtubeId: "xgGcEsEWcIo" },
+    { youtubeId: "WGdaDCzIOfw" },
 ];
 
 export default function CinematographyReels() {
