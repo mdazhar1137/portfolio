@@ -3,17 +3,17 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 
-const reels = [
-    { title: youtubeId: "ysEExM1EAM8" },
-    { title: "Brand Film Shot", youtubeId: "k9KmdB9pmAU" },
-    { title: "Podcast Cinematic Cut", youtubeId: "UjleExNh810" },
-    { title: "Music Cover Visual", youtubeId: "YE4UPMc_-tY" },
-    { title: "Political Documentary", youtubeId: "1ehUf4NJ-Lo" },
-    { title: "3D Lyrical Visual", youtubeId: "fNZmWCZCkKM" },
-    { title: "Wedding Teaser", youtubeId: "dQw4w9WgXcQ" },
-    { title: "Product Macro Shot", youtubeId: "OPf0YbXqDm0" },
-    { title: "Travel Cinematic", youtubeId: "RgKAFK5djSk" },
-    { title: "Portrait Reel", youtubeId: "l482T0yNkeo" },
+cconst reels = [
+    { youtubeId: "ysEExM1EAM8" },
+    { youtubeId: "k9KmdB9pmAU" },
+    { youtubeId: "UjleExNh810" },
+    { youtubeId: "YE4UPMc_-tY" },
+    { youtubeId: "1ehUf4NJ-Lo" },
+    { youtubeId: "fNZmWCZCkKM" },
+    { youtubeId: "dQw4w9WgXcQ" },
+    { youtubeId: "OPf0YbXqDm0" },
+    { youtubeId: "RgKAFK5djSk" },
+    { youtubeId: "l482T0yNkeo" },
 ];
 
 export default function CinematographyReels() {
@@ -108,12 +108,7 @@ function ReelCard({
                 )}
             </div>
 
-            {/* Caption */}
-            <div className="p-4">
-                <h3 className="text-xs font-semibold text-white">
-                    {reel.title}
-                </h3>
-            </div>
+
         </motion.div>
     );
 }
