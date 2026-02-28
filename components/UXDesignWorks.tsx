@@ -71,6 +71,14 @@ export default function UXDesignWorks() {
         </motion.div>
 
         {/* Cards */}
+        <div
+          style={{
+            paddingLeft: "20px",
+            paddingRight: "20px",
+            paddingTop: "20px",
+            paddingBottom: "20px",
+          }}
+        >
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 p-[20px]">
           {caseStudies.map((cs, i) => (
             <motion.a
