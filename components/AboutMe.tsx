@@ -189,7 +189,10 @@ export default function AboutMe() {
                         </a>
                     </div>
 
-                    <div className="flex flex-wrap justify-center gap-10 text-lg text-white/50">
+                    <div
+                        className="flex flex-wrap justify-center gap-10 text-lg text-white/50"
+                        style={{ paddingBottom: "20px" }}
+                    >
                         <a href="https://www.instagram.com/mdazhar1137/" target="_blank">Instagram</a>
                         <a href="https://www.facebook.com/mdazhar1137/" target="_blank">Facebook</a>
                         <a href="https://twitter.com/mdazhar1137" target="_blank">Twitter</a>
