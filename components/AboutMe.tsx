@@ -24,8 +24,8 @@ const experience = [
 
 export default function AboutMe() {
   return (
-    <section className="py-44 bg-[#121212]">
-      <div className="max-w-6xl mx-auto px-6 space-y-40">
+    <section className="py-48 bg-[#121212]">
+      <div className="max-w-6xl mx-auto px-6 space-y-44">
 
         {/* ===== HEADING & BIO ===== */}
         <motion.div
@@ -35,37 +35,37 @@ export default function AboutMe() {
           transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
           className="text-center max-w-4xl mx-auto"
         >
-          <span className="text-[11px] tracking-[0.4em] uppercase text-[#c8a96e]">
+          <span className="text-[11px] tracking-[0.45em] uppercase text-[#c8a96e]">
             04 — About
           </span>
 
-          <h2 className="mt-6 text-6xl md:text-7xl font-black text-white leading-tight">
+          <h2 className="mt-6 text-5xl md:text-6xl lg:text-7xl font-black text-white leading-tight">
             The Mind Behind <br />
             <span className="text-[#c8a96e]">the Frame</span>
           </h2>
 
-          <div className="mt-14 space-y-6 text-white/60 text-[17px] leading-[2]">
+          <div className="mt-14 space-y-6 text-white/60 text-[17px] leading-[1.9]">
             <p>
-              I began my journey in video editing with one dream — to see my name on
-              the big screen as an editor. That curiosity pushed me beyond editing
-              into design, motion, UX, cinematography, DI, writing, directing, and
-              today — Gen-AI powered creative workflows.
+              I began my journey in video editing with one dream — to see my name on the big
+              screen as an editor. That curiosity pushed me beyond editing into design,
+              motion, UX, cinematography, DI, writing, directing, and today — Gen-AI powered
+              creative workflows.
             </p>
             <p>
-              I’ve worked across ad agencies, marketing agencies, D2C brands,
-              product startups, satellite media channels, films, and podcasts —
-              always driven by storytelling, empathy, and respect for the craft.
+              I’ve worked across ad agencies, marketing agencies, D2C brands, product startups,
+              satellite media channels, films, and podcasts — driven by storytelling, empathy,
+              and respect for the craft.
             </p>
             <p>
-              Creative work isn’t about software. It’s about emotion, communication,
-              and making people feel something before they notice the technique.
+              Creative work isn’t about software. It’s about emotion, communication, and making
+              people feel something before they notice the technique.
             </p>
           </div>
         </motion.div>
 
         {/* ===== EXPERIENCE LEVELS ===== */}
-        <div className="max-w-5xl mx-auto">
-          <h3 className="text-center text-[11px] tracking-[0.35em] uppercase text-white/35 mb-16">
+        <div className="max-w-4xl mx-auto">
+          <h3 className="text-center text-[11px] tracking-[0.4em] uppercase text-white/40 mb-14">
             Experience Levels
           </h3>
 
@@ -76,9 +76,9 @@ export default function AboutMe() {
                   <span>{skill.label}</span>
                   <span>{skill.years} yrs</span>
                 </div>
-                <div className="h-[6px] bg-white/10 rounded-full">
+                <div className="h-[6px] bg-white/10 rounded-full overflow-hidden">
                   <div
-                    className="h-full rounded-full bg-[#c8a96e]"
+                    className="h-full bg-[#c8a96e] rounded-full"
                     style={{ width: `${skill.value}%` }}
                   />
                 </div>
@@ -87,36 +87,36 @@ export default function AboutMe() {
           </div>
         </div>
 
-        {/* ===== TOOLS & TECHNOLOGIES ===== */}
-        <div className="max-w-6xl mx-auto">
-          <h3 className="text-center text-[11px] tracking-[0.35em] uppercase text-white/35 mb-16">
+        {/* ===== TOOLS ===== */}
+        <div className="max-w-5xl mx-auto">
+          <h3 className="text-center text-[11px] tracking-[0.4em] uppercase text-white/40 mb-16">
             Tools & Technologies
           </h3>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {[
-              ["Video Editing", "Avid · Final Cut Pro X · Premiere Pro · DaVinci Resolve"],
-              ["Motion Graphics", "After Effects · Blender · Maya · Houdini (Learning)"],
-              ["UX Design", "Figma · Adobe XD"],
-              ["Graphic Design", "Photoshop · Illustrator · CorelDRAW"],
-              ["Cinematography", "Canon · Sony · ARRI · RED (Target)"],
+              ["Video Editing", "Avid, Final Cut Pro X, Premiere Pro, DaVinci Resolve"],
+              ["Motion Graphics", "After Effects, Blender, Maya, Houdini (Learning)"],
+              ["UX Design", "Figma, Adobe XD"],
+              ["Graphic Design", "Photoshop, Illustrator, CorelDRAW"],
+              ["Cinematography", "Canon, Sony, ARRI, RED (Target)"],
               ["Color Grading", "DaVinci Resolve"],
-              ["AI", "Midjourney · DALL·E · Stable Diffusion · ComfyUI · LTX-Video"],
+              ["AI", "Midjourney, DALL·E, Stable Diffusion, ComfyUI, LTX-Video"],
             ].map(([title, tools], i) => (
               <div
                 key={i}
                 className="rounded-2xl p-8 bg-white/[0.035] border border-white/[0.07]"
               >
-                <p className="text-lg font-semibold text-white mb-2">{title}</p>
-                <p className="text-sm text-white/55 leading-relaxed">{tools}</p>
+                <p className="text-base font-semibold text-white mb-2">{title}</p>
+                <p className="text-sm text-white/50 leading-relaxed">{tools}</p>
               </div>
             ))}
           </div>
         </div>
 
         {/* ===== WORK EXPERIENCE ===== */}
-        <div className="max-w-5xl mx-auto">
-          <h3 className="text-center text-[11px] tracking-[0.35em] uppercase text-white/35 mb-16">
+        <div className="max-w-4xl mx-auto">
+          <h3 className="text-center text-[11px] tracking-[0.4em] uppercase text-white/40 mb-14">
             Work Experience
           </h3>
 
@@ -124,36 +124,36 @@ export default function AboutMe() {
             {experience.map((exp, i) => (
               <div
                 key={i}
-                className="flex flex-col md:flex-row md:justify-between gap-3 border-b border-white/10 pb-6"
+                className="flex justify-between items-start gap-6 border-b border-white/10 pb-5"
               >
                 <div>
                   <p className="text-base text-white">{exp.role}</p>
-                  <p className="text-sm text-white/50">{exp.company}</p>
+                  <p className="text-sm text-white/45">{exp.company}</p>
                 </div>
-                <p className="text-sm text-white/40">{exp.period}</p>
+                <p className="text-sm text-white/35">{exp.period}</p>
               </div>
             ))}
           </div>
         </div>
 
         {/* ===== CTA ===== */}
-        <div className="flex flex-col items-center gap-12 pt-20">
-          <div className="flex flex-col sm:flex-row gap-8">
+        <div className="flex flex-col items-center gap-14 pt-16">
+          <div className="flex gap-10">
             <a
               href="tel:+919182494402"
-              className="px-14 py-5 text-lg border border-[#c8a96e]/70 text-[#c8a96e] rounded-md hover:bg-[#c8a96e]/10 transition"
+              className="px-14 py-5 border-2 border-[#c8a96e] text-[#c8a96e] rounded-md text-base hover:bg-[#c8a96e]/10 transition"
             >
               Call Now
             </a>
             <a
               href="mailto:mdazhar1137@gmail.com"
-              className="px-14 py-5 text-lg border border-white/30 text-white rounded-md hover:bg-white/5 transition"
+              className="px-14 py-5 border-2 border-white/40 text-white rounded-md text-base hover:bg-white/10 transition"
             >
               Send Email
             </a>
           </div>
 
-          <div className="flex flex-wrap justify-center gap-10 text-sm text-white/60">
+          <div className="flex flex-wrap justify-center gap-10 text-sm text-white/50">
             <a href="https://www.instagram.com/mdazhar1137/" target="_blank">Instagram</a>
             <a href="https://www.facebook.com/mdazhar1137/" target="_blank">Facebook</a>
             <a href="https://twitter.com/mdazhar1137" target="_blank">Twitter</a>
