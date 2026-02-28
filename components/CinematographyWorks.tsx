@@ -1,158 +1,118 @@
 "use client";
 
-import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef } from "react";
+import { motion } from "framer-motion";
+import { useState } from "react";
 
-const shots = [
-    {
-        title: "Neon Alley, Tokyo",
-        caption: "Street cinematography — natural backlight, anamorphic lens",
-        aspect: "16/9",
-        gradient: "linear-gradient(160deg, #1a0a2e 0%, #0a0814 50%, #120820 100%)",
-        accent: "#9c6ec8",
-    },
-    {
-        title: "Portrait in Fog",
-        caption: "Single-source soft light, 50mm 1.4 wide open",
-        aspect: "3/4",
-        gradient: "linear-gradient(160deg, #0a1020 0%, #060c1a 100%)",
-        accent: "#6e9fc8",
-    },
-    {
-        title: "Desert Horizon",
-        caption: "Magic hour, stabilised gimbal, DJI RS3 · Canon R5",
-        aspect: "21/9",
-        gradient: "linear-gradient(160deg, #1a0e0a 0%, #0e0805 100%)",
-        accent: "#c8a96e",
-    },
-    {
-        title: "Studio Triptych",
-        caption: "Controlled lighting setup — Arri SkyPanel + practicals",
-        aspect: "16/9",
-        gradient: "linear-gradient(160deg, #0a1a12 0%, #060e0a 100%)",
-        accent: "#6ec8a9",
-    },
+const reels = [
+    { title: "Urban Night Walk", youtubeId: "FyhFBHpTh6Y" },
+    { title: "Brand Film Shot", youtubeId: "k9KmdB9pmAU" },
+    { title: "Podcast Cinematic Cut", youtubeId: "UjleExNh810" },
+    { title: "Music Cover Visual", youtubeId: "YE4UPMc_-tY" },
+    { title: "Political Documentary", youtubeId: "1ehUf4NJ-Lo" },
+    { title: "3D Lyrical Visual", youtubeId: "fNZmWCZCkKM" },
+    { title: "Wedding Teaser", youtubeId: "dQw4w9WgXcQ" },
+    { title: "Product Macro Shot", youtubeId: "OPf0YbXqDm0" },
+    { title: "Travel Cinematic", youtubeId: "RgKAFK5djSk" },
+    { title: "Portrait Reel", youtubeId: "l482T0yNkeo" },
+    { title: "Street B-roll", youtubeId: "3tmd-ClpJxA" },
+    { title: "Studio Lighting Test", youtubeId: "9bZkp7q19f0" },
 ];
 
 export default function CinematographyWorks() {
     return (
-        <section className="py-32 bg-[#0e0e0e]">
-            <div className="max-w-7xl mx-auto px-6">
+        <section className="py-32 bg-[#0e0e0e] overflow-hidden">
+            <div className="w-full">
+
                 {/* Heading */}
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true, margin: "-100px" }}
+                    viewport={{ once: true }}
                     transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-                    className="mb-16"
+                    className="mb-14 text-center max-w-6xl mx-auto"
                 >
-                    <span className="text-[10px] tracking-[0.35em] uppercase text-[#9c6ec8] font-light">
+                    <span className="text-[10px] tracking-[0.35em] uppercase text-[#9c6ec8]">
                         03 — Camera
                     </span>
-                    <h2 className="mt-3 text-4xl md:text-5xl font-black text-white tracking-tight leading-none">
-                        Cinematography Works
+                    <h2 className="mt-3 text-4xl md:text-5xl font-black text-white">
+                        Cinematography Reels
                     </h2>
-                    <p className="mt-4 text-white/40 max-w-lg text-sm leading-relaxed">
-                        Light as language. Every frame composed to evoke feeling before
-                        narrative.
+                    <p className="mt-4 text-white/40 text-sm max-w-xl mx-auto">
+                        A curated selection of visual storytelling, framing emotion through light,
+                        movement, and composition.
                     </p>
                 </motion.div>
 
-                {/* Masonry-style gallery */}
-                <div className="columns-1 md:columns-2 gap-5 space-y-5">
-                    {shots.map((shot, i) => (
-                        <ShotCard key={i} shot={shot} index={i} />
+                {/* Carousel */}
+                <motion.div
+                    className="flex gap-6 px-[20px] cursor-grab"
+                    drag="x"
+                    dragConstraints={{ left: -1200, right: 0 }}
+                >
+                    {reels.map((reel, i) => (
+                        <ReelCard key={i} reel={reel} index={i} />
                     ))}
-                </div>
+                </motion.div>
             </div>
         </section>
     );
 }
 
-function ShotCard({
-    shot,
+function ReelCard({
+    reel,
     index,
 }: {
-    shot: (typeof shots)[0];
+    reel: { title: string; youtubeId: string };
     index: number;
 }) {
-    const ref = useRef<HTMLDivElement>(null);
-    const { scrollYProgress } = useScroll({
-        target: ref,
-        offset: ["start end", "end start"],
-    });
-    const y = useTransform(scrollYProgress, [0, 1], [-20, 20]);
+    const [play, setPlay] = useState(false);
 
     return (
         <motion.div
-            ref={ref}
-            initial={{ opacity: 0, scale: 0.97 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true, margin: "-60px" }}
-            transition={{
-                duration: 0.8,
-                delay: index * 0.1,
-                ease: [0.16, 1, 0.3, 1],
-            }}
-            whileHover={{ scale: 1.01 }}
-            className="group relative rounded-xl overflow-hidden cursor-pointer break-inside-avoid mb-5"
-            style={{ border: "1px solid rgba(255,255,255,0.05)" }}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: index * 0.05, duration: 0.6 }}
+            className="relative min-w-[320px] md:min-w-[420px] rounded-xl overflow-hidden bg-black border border-white/[0.08]"
         >
-            {/* Image placeholder with parallax */}
-            <div style={{ aspectRatio: shot.aspect, overflow: "hidden" }}>
-                <motion.div
-                    style={{ y, height: "110%", width: "100%" }}
-                    className="relative"
-                >
-                    <div
-                        className="absolute inset-0"
-                        style={{ background: shot.gradient }}
+            {/* 16:9 Container */}
+            <div className="aspect-video relative overflow-hidden">
+                {!play ? (
+                    <button
+                        onClick={() => setPlay(true)}
+                        className="absolute inset-0 flex items-center justify-center group"
+                    >
+                        {/* Placeholder thumbnail */}
+                        <div className="absolute inset-0 bg-gradient-to-br from-[#111] to-[#000]" />
+
+                        {/* Play button */}
+                        <div className="relative z-10 flex items-center justify-center w-16 h-16 rounded-full border border-white/40 group-hover:scale-110 transition">
+                            <svg
+                                width="20"
+                                height="20"
+                                viewBox="0 0 24 24"
+                                fill="white"
+                            >
+                                <path d="M8 5v14l11-7z" />
+                            </svg>
+                        </div>
+                    </button>
+                ) : (
+                    <iframe
+                        className="w-full h-full"
+                        src={`https://www.youtube.com/embed/${reel.youtubeId}?autoplay=1&rel=0`}
+                        allow="autoplay; encrypted-media"
+                        allowFullScreen
                     />
-                    {/* Simulated film grain */}
-                    <div
-                        className="absolute inset-0"
-                        style={{
-                            backgroundImage:
-                                "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.08'/%3E%3C/svg%3E\")",
-                            mixBlendMode: "overlay",
-                        }}
-                    />
-                    {/* Center icon */}
-                    <div className="absolute inset-0 flex items-center justify-center opacity-20">
-                        <svg
-                            width="40"
-                            height="40"
-                            viewBox="0 0 40 40"
-                            fill={shot.accent}
-                            opacity="0.6"
-                        >
-                            <circle cx="20" cy="20" r="10" fill="none" stroke={shot.accent} strokeWidth="1" />
-                            <circle cx="20" cy="20" r="3" fill={shot.accent} />
-                            <path d="M20 5v5M20 30v5M5 20h5M30 20h5" stroke={shot.accent} strokeWidth="1" strokeLinecap="round" />
-                        </svg>
-                    </div>
-                </motion.div>
+                )}
             </div>
 
-            {/* Caption overlay */}
-            <div
-                className="absolute bottom-0 left-0 right-0 p-5"
-                style={{
-                    background:
-                        "linear-gradient(to top, rgba(10,10,10,0.9) 0%, transparent 100%)",
-                }}
-            >
-                <h3 className="text-sm font-semibold text-white mb-1">{shot.title}</h3>
-                <p className="text-[10px] text-white/40 leading-relaxed">
-                    {shot.caption}
-                </p>
+            {/* Caption */}
+            <div className="p-4">
+                <h3 className="text-sm font-semibold text-white">
+                    {reel.title}
+                </h3>
             </div>
-
-            {/* Hover accent border */}
-            <div
-                className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-xl pointer-events-none"
-                style={{ border: `1px solid ${shot.accent}30` }}
-            />
         </motion.div>
     );
 }
