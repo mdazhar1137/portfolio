@@ -66,7 +66,7 @@ export default function AboutMe() {
                 {/* ===== EXPERIENCE LEVELS ===== */}
                 <div
                     className="max-w-8xl mx-auto"
-                    style={{ paddingLeft: "20px", paddingRight: "20px" }}
+                    style={{ paddingLeft: "20px", paddingRight: "20px", paddingTop: "20px", paddingBottom: "20px" }}
                 >
                     <h3 className="text-center text-[11px] tracking-[0.4em] uppercase text-white/40 mb-14">
                         Experience Levels
