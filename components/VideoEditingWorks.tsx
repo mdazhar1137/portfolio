@@ -12,12 +12,12 @@ const videos = [
     youtubeId: "FyhFBHpTh6Y",
   },
   {
-    title: "Documentary — Voices Unheard",
-    client: "Independent",
+    title: "Airfryer - Commercial",
+    client: "SOLARA",
     duration: "18:47",
-    year: "2023",
+    year: "2026",
     role: "Lead Editor",
-    youtubeId: "9bZkp7q19f0",
+    youtubeId: "DOP - Editor - DI - SFX",
   },
   {
     title: "Festival Opener Reel",
