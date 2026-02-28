@@ -4,43 +4,95 @@ import { motion } from "framer-motion";
 
 const projects = [
     {
-        title: "Reel Edit — Brand Film",
-        category: "Video Editing",
-        description:
-            "A 3-minute cinematic brand story, color-graded and sound-designed for a luxury automotive client.",
-        tags: ["DaVinci Resolve", "After Effects", "DI"],
-        color: "#c8a96e",
+        title: "Calendar & Meeting Booking UX",
+        industry: "SaaS · Productivity",
+        type: "UX Design",
+        behanceId: "180608005",
+        behanceUrl:
+            "https://www.behance.net/gallery/180608005/Calender-EventMeeting-Booking-Product-UX-Design",
+        accent: "#c8a96e",
     },
     {
-        title: "UX Overhaul — FinTech App",
-        category: "UX Design",
-        description:
-            "End-to-end redesign of a banking app, reducing task completion time by 38% through user research and motion-led flows.",
-        tags: ["Figma", "Prototyping", "User Research"],
-        color: "#6e9fc8",
+        title: "FinTech Mobile Banking",
+        industry: "FinTech",
+        type: "UX Design",
+        behanceId: "223456789",
+        behanceUrl: "https://www.behance.net/gallery/223456789/FinTech-App",
+        accent: "#6e9fc8",
     },
     {
-        title: "Short Film — 'Liminal'",
-        category: "Cinematography",
-        description:
-            "Award-recognised short film shot on ARRI Alexa Mini. 4K ProRes workflow, controlled natural lighting.",
-        tags: ["ARRI", "Color Science", "DI"],
-        color: "#9c6ec8",
+        title: "Healthcare Patient Portal",
+        industry: "Healthcare",
+        type: "UX + Accessibility",
+        behanceId: "323456789",
+        behanceUrl: "https://www.behance.net/gallery/323456789/Healthcare-UX",
+        accent: "#9c6ec8",
     },
     {
-        title: "Gen AI Visual System",
-        category: "Gen AI + Motion",
-        description:
-            "AI-assisted visual identity system with motion-generative elements deployed for a tech startup's global brand campaign.",
-        tags: ["Midjourney", "ComfyUI", "Motion Graphics"],
-        color: "#6ec8a9",
+        title: "E-commerce AI Recommender",
+        industry: "E-commerce",
+        type: "AI-Driven UX",
+        behanceId: "423456789",
+        behanceUrl: "https://www.behance.net/gallery/423456789/Ecommerce-AI",
+        accent: "#6ec8a9",
+    },
+    {
+        title: "Creative Studio Dashboard",
+        industry: "Media & Agency",
+        type: "Product Design",
+        behanceId: "523456789",
+        behanceUrl: "https://www.behance.net/gallery/523456789/Studio-Dashboard",
+        accent: "#c86e9c",
+    },
+
+    // second column (6–10)
+    {
+        title: "Brand Visual System",
+        industry: "Startup · Branding",
+        type: "Visual Design",
+        behanceId: "623456789",
+        behanceUrl: "https://www.behance.net/gallery/623456789/Brand-System",
+        accent: "#6e9fc8",
+    },
+    {
+        title: "Marketing Campaign UI",
+        industry: "Advertising",
+        type: "UI Design",
+        behanceId: "723456789",
+        behanceUrl: "https://www.behance.net/gallery/723456789/Marketing-UI",
+        accent: "#c8a96e",
+    },
+    {
+        title: "Internal Analytics Tool",
+        industry: "Enterprise",
+        type: "Dashboard UX",
+        behanceId: "823456789",
+        behanceUrl: "https://www.behance.net/gallery/823456789/Analytics-Dashboard",
+        accent: "#6ec8a9",
+    },
+    {
+        title: "Gen-AI Motion System",
+        industry: "AI · Tech",
+        type: "Motion Design",
+        behanceId: "923456789",
+        behanceUrl: "https://www.behance.net/gallery/923456789/AI-Motion",
+        accent: "#9c6ec8",
+    },
+    {
+        title: "Media App Redesign",
+        industry: "Entertainment",
+        type: "UX/UI Design",
+        behanceId: "103456789",
+        behanceUrl: "https://www.behance.net/gallery/103456789/Media-App",
+        accent: "#c86e9c",
     },
 ];
 
 export default function Projects() {
     return (
-        <section className="py-32 px-6 bg-[#121212]">
-            <div className="max-w-7xl mx-auto">
+        <section className="py-32 bg-[#121212]">
+            <div className="w-full max-w-7xl mx-auto px-6">
+
                 {/* Heading */}
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
@@ -49,28 +101,31 @@ export default function Projects() {
                     transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
                     className="mb-20"
                 >
-                    <span className="text-[10px] tracking-[0.35em] uppercase text-[#c8a96e] font-light">
+                    <span className="text-[10px] tracking-[0.35em] uppercase text-[#c8a96e]">
                         Featured
                     </span>
-                    <h2 className="mt-3 text-4xl md:text-6xl font-black text-white tracking-tight leading-none">
+                    <h2 className="mt-3 text-4xl md:text-6xl font-black text-white">
                         Selected Works
                     </h2>
                 </motion.div>
 
-                {/* Grid */}
+                {/* Grid — 2 columns × 5 rows */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     {projects.map((proj, i) => (
-                        <motion.div
+                        <motion.a
                             key={i}
+                            href={proj.behanceUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
                             initial={{ opacity: 0, y: 40 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true, margin: "-60px" }}
                             transition={{
                                 duration: 0.7,
-                                delay: i * 0.1,
+                                delay: i * 0.05,
                                 ease: [0.16, 1, 0.3, 1],
                             }}
-                            whileHover={{ y: -8, scale: 1.01 }}
+                            whileHover={{ y: -6 }}
                             className="group relative rounded-2xl overflow-hidden cursor-pointer"
                             style={{
                                 background: "rgba(255,255,255,0.03)",
@@ -78,79 +133,40 @@ export default function Projects() {
                                 backdropFilter: "blur(16px)",
                             }}
                         >
-                            {/* Hover glow */}
-                            <motion.div
-                                className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none rounded-2xl"
-                                style={{
-                                    boxShadow: `0 0 60px ${proj.color}22, inset 0 0 40px ${proj.color}08`,
-                                    border: `1px solid ${proj.color}30`,
-                                }}
-                            />
+                            {/* Behance Thumbnail */}
+                            <div className="aspect-[16/9] bg-black overflow-hidden">
+                                <iframe
+                                    src={`https://www.behance.net/embed/project/${proj.behanceId}`}
+                                    className="w-full h-full pointer-events-none"
+                                    allowFullScreen
+                                />
+                            </div>
 
-                            {/* Top accent bar */}
+                            {/* Content */}
                             <div
-                                className="h-px w-full"
                                 style={{
-                                    background: `linear-gradient(90deg, ${proj.color}80, transparent)`,
+                                    paddingLeft: "20px",
+                                    paddingRight: "20px",
+                                    paddingTop: "20px",
+                                    paddingBottom: "20px",
                                 }}
-                            />
-
-                            <div className="p-8">
-                                {/* Category badge */}
-                                <span
-                                    className="inline-block text-[9px] tracking-[0.3em] uppercase font-medium px-3 py-1.5 rounded-sm mb-6"
-                                    style={{
-                                        color: proj.color,
-                                        background: `${proj.color}15`,
-                                        border: `1px solid ${proj.color}25`,
-                                    }}
-                                >
-                                    {proj.category}
-                                </span>
-
-                                {/* Title */}
-                                <h3 className="text-xl md:text-2xl font-bold text-white mb-3 tracking-tight">
+                            >
+                                <h3 className="text-lg font-bold text-white mb-1">
                                     {proj.title}
                                 </h3>
 
-                                {/* Description */}
-                                <p className="text-white/45 text-sm leading-relaxed mb-6">
-                                    {proj.description}
+                                <p className="text-[11px] text-white/50 tracking-wide uppercase">
+                                    {proj.industry} · {proj.type}
                                 </p>
 
-                                {/* Tags */}
-                                <div className="flex flex-wrap gap-2">
-                                    {proj.tags.map((tag) => (
-                                        <span
-                                            key={tag}
-                                            className="text-[10px] tracking-wider text-white/30 border border-white/10 px-2.5 py-1 rounded-sm"
-                                        >
-                                            {tag}
-                                        </span>
-                                    ))}
-                                </div>
-
-                                {/* Arrow */}
-                                <div className="mt-8 flex items-center gap-2 text-[11px] tracking-[0.2em] uppercase text-white/30 group-hover:text-white/60 transition-colors duration-300">
-                                    <span>View Project</span>
-                                    <svg
-                                        width="14"
-                                        height="14"
-                                        viewBox="0 0 14 14"
-                                        fill="none"
-                                        className="group-hover:translate-x-1 transition-transform duration-300"
-                                    >
-                                        <path
-                                            d="M1 7h12M8 3l5 4-5 4"
-                                            stroke="currentColor"
-                                            strokeWidth="1.2"
-                                            strokeLinecap="round"
-                                            strokeLinejoin="round"
-                                        />
-                                    </svg>
-                                </div>
+                                <div
+                                    className="mt-6 h-px"
+                                    style={{
+                                        background: `linear-gradient(90deg, ${proj.accent}60, transparent)`,
+                                    }}
+                                />
                             </div>
-                        </motion.div>
+                        </motion.a>
                     ))}
                 </div>
             </div>
