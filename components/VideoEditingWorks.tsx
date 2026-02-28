@@ -16,8 +16,8 @@ const videos = [
     client: "SOLARA",
     duration: "18:47",
     year: "2026",
-    role: "Lead Editor",
-    youtubeId: "DOP - Editor - DI - SFX",
+    role: "DOP - Editor - DI - SFX",
+    youtubeId: "k9KmdB9pmAU",
   },
   {
     title: "Festival Opener Reel",
