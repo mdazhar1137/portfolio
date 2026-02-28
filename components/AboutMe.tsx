@@ -119,12 +119,14 @@ export default function AboutMe() {
                                     style={{
                                         paddingTop: "20px",
                                         paddingBottom: "20px",
+                                        paddingLeft: "20px",
+                                        paddingRight: "20px",
                                     }}
                                 >
                                     <p className="text-lg font-semibold text-white mb-2">
                                         {title}
                                     </p>
-                                    <p className="text-sm text-white/50 leading-relaxed">
+                                    <p className="text-base text-white/50 leading-relaxed">
                                         {tools}
                                     </p>
                                 </div>
