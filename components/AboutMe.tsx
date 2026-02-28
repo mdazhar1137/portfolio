@@ -91,7 +91,9 @@ export default function AboutMe() {
                 </div>
 
                 {/* ===== TOOLS ===== */}
-                <div className="max-w-5xl mx-auto">
+                <div
+                    className="max-w-8xl mx-auto"
+                    style={{ paddingLeft: "20px", paddingRight: "20px", paddingTop: "20px", paddingBottom: "20px" }}>
                     <h3 className="text-center text-[11px] tracking-[0.4em] uppercase text-white/40 mb-16">
                         Tools & Technologies
                     </h3>
