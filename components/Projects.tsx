@@ -103,8 +103,6 @@ export default function Projects() {
                     style={{
                         paddingLeft: "20px",
                         paddingRight: "20px",
-                        paddingtop: "20px",
-                        paddingBottom: "20px",
                     }}
                 >
                     {projects.map((proj, i) => (
