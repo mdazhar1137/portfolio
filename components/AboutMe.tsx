@@ -161,7 +161,7 @@ export default function AboutMe() {
                 </div>
 
                 {/* ===== CTA ===== */}
-                <div className="flex flex-col items-center gap-14 pt-16">
+                <div className="flex flex-col items-center gap-8 pt-16">
                     <div className="flex gap-10">
                         <a
                             href="tel:+919182494402"
