@@ -59,7 +59,7 @@ function ReelCard({
     reel,
     index,
 }: {
-    reel: { title: string; youtubeId: string };
+    reel: { youtubeId: string };
     index: number;
 }) {
     const [play, setPlay] = useState(false);
@@ -82,7 +82,7 @@ function ReelCard({
                         {/* YouTube thumbnail */}
                         <img
                             src={`https://i.ytimg.com/vi/${reel.youtubeId}/hqdefault.jpg`}
-                            alt={reel.title}
+                            alt=""
                             className="absolute inset-0 w-full h-full object-cover"
                         />
 
@@ -107,8 +107,6 @@ function ReelCard({
                     />
                 )}
             </div>
-
-
         </motion.div>
     );
 }
