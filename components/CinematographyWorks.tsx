@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 
 const reels = [
-    { title: "Urban Night Walk", youtubeId: "ysEExM1EAM8" },
+    { title: youtubeId: "ysEExM1EAM8" },
     { title: "Brand Film Shot", youtubeId: "k9KmdB9pmAU" },
     { title: "Podcast Cinematic Cut", youtubeId: "UjleExNh810" },
     { title: "Music Cover Visual", youtubeId: "YE4UPMc_-tY" },
