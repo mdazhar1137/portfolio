@@ -64,7 +64,7 @@ export default function AboutMe() {
         </motion.div>
 
         {/* ===== EXPERIENCE LEVELS ===== */}
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-8xl mx-auto">
           <h3 className="text-center text-[11px] tracking-[0.4em] uppercase text-white/40 mb-14">
             Experience Levels
           </h3>
