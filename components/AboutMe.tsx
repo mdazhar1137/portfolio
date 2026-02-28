@@ -75,7 +75,7 @@ export default function AboutMe() {
                     <div className="space-y-8">
                         {skills.map((skill, i) => (
                             <div key={i}>
-                                <div className="flex justify-between text-sm text-white/70 mb-2">
+                                <div className="flex justify-between text-lg text-white/70 mb-2">
                                     <span>{skill.label}</span>
                                     <span>{skill.years} yrs</span>
                                 </div>
