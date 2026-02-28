@@ -94,9 +94,7 @@ export default function AboutMe() {
                 <div
                     className="max-w-8xl mx-auto"
                     style={{ paddingLeft: "20px", paddingRight: "20px", paddingTop: "20px", paddingBottom: "20px" }}>
-                    <h3
-                        className="text-center text-[11px] tracking-[0.4em] uppercase text-white/40 mb-16"
-                        style={{ paddingtop: "20px", paddingbottom: "20px" }}>
+                    <h3 className="text-center text-[11px] tracking-[0.4em] uppercase text-white/40 mb-16">
                         Tools & Technologies
                     </h3>
 
@@ -112,9 +110,9 @@ export default function AboutMe() {
                         ].map(([title, tools], i) => (
                             <div
                                 key={i}
-                                className="rounded-2xl p-8 bg-white/[0.035] border border-white/[0.07]"
+                                className="rounded-2xl p-8 bg-white/[0.035] border border-white/[0.1]"
                             >
-                                <p className="text-base font-semibold text-white mb-2">{title}</p>
+                                <p className="text-lg font-semibold text-white mb-2">{title}</p>
                                 <p className="text-sm text-white/50 leading-relaxed">{tools}</p>
                             </div>
                         ))}
