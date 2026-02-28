@@ -35,7 +35,7 @@ export default function CinematographyReels() {
                     <h2 className="mt-3 text-4xl md:text-5xl font-black text-white">
                         Recent Works
                     </h2>
-                    <p className="mt-4 text-white/40 text-sm max-w-xl mx-auto">
+                    <p className="mt-4 text-white/40 text-sm max-w-8xl mx-auto">
                         Vertical visual storytelling — composed for motion, rhythm, and emotion.
                     </p>
                 </motion.div>
