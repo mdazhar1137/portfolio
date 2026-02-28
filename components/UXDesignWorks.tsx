@@ -116,53 +116,55 @@ export default function UXDesignWorks() {
                                         paddingBottom: "20px",
                                     }}
                                 >
-                                    <div className="p-8">
-                                        <span
-                                            className="text-6xl font-black block mb-4"
-                                            style={{ color: `${cs.accent}18` }}
-                                        >
-                                            {cs.number}
-                                        </span>
+                                    <span
+                                        className="text-6xl font-black block mb-4"
+                                        style={{ color: `${cs.accent}18` }}
+                                    >
+                                        {cs.number}
+                                    </span>
 
-                                        <div
-                                            className="h-px mb-6"
-                                            style={{
-                                                background: `linear-gradient(90deg, ${cs.accent}60, transparent)`,
-                                            }}
-                                        />
+                                    <div
+                                        className="h-px mb-6"
+                                        style={{
+                                            background: `linear-gradient(90deg, ${cs.accent}60, transparent)`,
+                                        }}
+                                    />
 
-                                        <h3 className="text-xl font-bold text-white mb-2">
-                                            {cs.title}
-                                        </h3>
-                                        <p className="text-[13px] text-white/40 mb-4">{cs.brief}</p>
+                                    <h3 className="text-xl font-bold text-white mb-2">
+                                        {cs.title}
+                                    </h3>
 
-                                        <p className="text-sm mb-5" style={{ color: cs.accent }}>
-                                            ↑ {cs.impact}
-                                        </p>
+                                    <p className="text-[13px] text-white/40 mb-4">
+                                        {cs.brief}
+                                    </p>
 
-                                        <div className="flex flex-wrap gap-2">
-                                            {cs.skills.map((skill) => (
-                                                <span
-                                                    key={skill}
-                                                    className="text-[9px] uppercase px-2.5 py-1"
-                                                    style={{
-                                                        color: `${cs.accent}cc`,
-                                                        background: `${cs.accent}10`,
-                                                        border: `1px solid ${cs.accent}20`,
-                                                    }}
-                                                >
-                                                    {skill}
-                                                </span>
-                                            ))}
-                                        </div>
+                                    <p className="text-sm mb-5" style={{ color: cs.accent }}>
+                                        ↑ {cs.impact}
+                                    </p>
 
-                                        <div
-                                            className="mt-8 text-[10px] uppercase tracking-widest"
-                                            style={{ color: `${cs.accent}60` }}
-                                        >
-                                            View on Behance →
-                                        </div>
+                                    <div className="flex flex-wrap gap-2">
+                                        {cs.skills.map((skill) => (
+                                            <span
+                                                key={skill}
+                                                className="text-[9px] uppercase px-2.5 py-1"
+                                                style={{
+                                                    color: `${cs.accent}cc`,
+                                                    background: `${cs.accent}10`,
+                                                    border: `1px solid ${cs.accent}20`,
+                                                }}
+                                            >
+                                                {skill}
+                                            </span>
+                                        ))}
                                     </div>
+
+                                    <div
+                                        className="mt-8 text-[10px] uppercase tracking-widest"
+                                        style={{ color: `${cs.accent}60` }}
+                                    >
+                                        View on Behance →
+                                    </div>
+                                </div>
                             </motion.a>
                         ))}
                     </div>
