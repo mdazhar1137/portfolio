@@ -35,7 +35,7 @@ const experience = [
 export default function AboutMe() {
     return (
         <section className="py-40 bg-[#121212]">
-            <div className="max-w-7xl mx-auto px-6 space-y-32">
+            <div className="max-w-6xl mx-auto px-6 space-y-40">
 
                 {/* HEADER */}
                 <div className="max-w-3xl">
