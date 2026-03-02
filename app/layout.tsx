@@ -9,22 +9,43 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Portfolio — Creative Director & Visual Storyteller",
+  title: "Azhar Creative – Cinematic Visual Storytelling",
   description:
-    "Award-level creative portfolio spanning video editing, cinematography, UX design, motion graphics, DI, and Gen AI-assisted workflows. 8+ years of cinematic storytelling.",
+    "Premium branding, films & visual stories crafted with intent. 8+ years of cinematic storytelling.",
+
   keywords: [
-    "portfolio",
+    "Azhar Creative",
+    "creative director portfolio",
     "video editing",
-    "cinematographer",
-    "UX designer",
+    "cinematography",
+    "visual storytelling",
     "motion graphics",
     "DI artist",
-    "Gen AI",
+    "Gen AI workflows",
   ],
+
   openGraph: {
-    title: "Portfolio — Creative Director & Visual Storyteller",
+    title: "Azhar Creative – Cinematic Visual Storytelling",
     description: "Cinematic. Intentional. Premium.",
+    url: "https://www.azharcreative.com",
+    siteName: "Azhar Creative",
+    images: [
+      {
+        url: "https://www.azharcreative.com/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Azhar Creative – Cinematic Portfolio",
+      },
+    ],
+    locale: "en_IN",
     type: "website",
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Azhar Creative – Cinematic Visual Storytelling",
+    description: "Cinematic. Intentional. Premium.",
+    images: ["https://www.azharcreative.com/og-image.jpg"],
   },
 };
 
