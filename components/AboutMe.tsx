@@ -1,6 +1,6 @@
 "use client";
-
-import { motion } from "framer-motion";
+import { motion, useMotionValue, useTransform, animate } from "framer-motion";
+import { useEffect, useRef, useState } from "react";
 
 const skills = [
     { label: "Video Editing", years: "9+", value: 95 },
@@ -22,7 +22,50 @@ const experience = [
     { role: "Video Editor", company: "Yoyo TV", period: "Jun 2016 — Dec 2018" },
 ];
 
+const stats = [
+    { value: 9, suffix: "+", label: "Years of Experience" },
+    { value: 100, suffix: "+", label: "Projects Delivered" },
+    { value: 30, suffix: "+", label: "Happy Clients" },
+    { value: 7, suffix: "", label: "Creative Disciplines" },
+];
+
+function AnimatedCounter({ target, suffix, inView }: { target: number; suffix: string; inView: boolean }) {
+    const count = useMotionValue(0);
+    const rounded = useTransform(count, (v) => Math.round(v));
+    const [display, setDisplay] = useState("0");
+
+    useEffect(() => {
+        if (!inView) return;
+        const controls = animate(count, target, { duration: 2, ease: [0.16, 1, 0.3, 1] });
+        return controls.stop;
+    }, [inView, count, target]);
+
+    useEffect(() => {
+        const unsubscribe = rounded.on("change", (v) => setDisplay(String(v)));
+        return unsubscribe;
+    }, [rounded]);
+
+    return <span>{display}{suffix}</span>;
+}
+
 export default function AboutMe() {
+    const statsRef = useRef<HTMLDivElement>(null);
+    const [statsInView, setStatsInView] = useState(false);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                if (entry.isIntersecting) {
+                    setStatsInView(true);
+                    observer.disconnect();
+                }
+            },
+            { threshold: 0.3 }
+        );
+        if (statsRef.current) observer.observe(statsRef.current);
+        return () => observer.disconnect();
+    }, []);
+
     return (
         <section className="py-48 bg-[#121212]">
             <div className="max-w-8xl mx-auto px-6 space-y-44">
@@ -44,6 +87,28 @@ export default function AboutMe() {
                         <span className="text-[#c8a96e]">the Frame</span>
                     </h2>
 
+                    {/* ===== STATS COUNTERS ===== */}
+                    <div ref={statsRef} className="grid grid-cols-2 lg:grid-cols-4 gap-8 mt-16 mb-8">
+                        {stats.map((stat, i) => (
+                            <motion.div
+                                key={stat.label}
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ delay: i * 0.15, duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+                                className="text-center"
+                            >
+                                <div className="text-4xl md:text-5xl font-black text-[#c8a96e] mb-2">
+                                    <AnimatedCounter target={stat.value} suffix={stat.suffix} inView={statsInView} />
+                                </div>
+                                <div className="w-8 h-px bg-white/20 mx-auto mb-2" />
+                                <p className="text-[12px] tracking-[0.2em] uppercase text-white/40">
+                                    {stat.label}
+                                </p>
+                            </motion.div>
+                        ))}
+                    </div>
+
                     <div className="mt-14 space-y-6 text-white/60 text-[17px] leading-[1.9]">
                         <p>
                             I began my journey in video editing with one dream — to see my name on the big
@@ -52,12 +117,12 @@ export default function AboutMe() {
                             creative workflows.
                         </p>
                         <p>
-                            I’ve worked across ad agencies, marketing agencies, D2C brands, product startups,
+                            I've worked across ad agencies, marketing agencies, D2C brands, product startups,
                             satellite media channels, films, and podcasts — driven by storytelling, empathy,
                             and respect for the craft.
                         </p>
                         <p>
-                            Creative work isn’t about software. It’s about emotion, communication, and making
+                            Creative work isn't about software. It's about emotion, communication, and making
                             people feel something before they notice the technique.
                         </p>
                     </div>
@@ -80,9 +145,12 @@ export default function AboutMe() {
                                     <span>{skill.years} yrs</span>
                                 </div>
                                 <div className="h-[20px] bg-white/10 rounded-full overflow-hidden">
-                                    <div
+                                    <motion.div
                                         className="h-full bg-[#c8a96e] rounded-full"
-                                        style={{ width: `${skill.value}%` }}
+                                        initial={{ width: 0 }}
+                                        whileInView={{ width: `${skill.value}%` }}
+                                        viewport={{ once: true }}
+                                        transition={{ duration: 1.2, delay: i * 0.1, ease: [0.16, 1, 0.3, 1] }}
                                     />
                                 </div>
                             </div>
