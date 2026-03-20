@@ -8,8 +8,8 @@ export default function MouseGradient() {
     useEffect(() => {
         const handleMouseMove = (e: MouseEvent) => {
             setPosition({
-                x: (e.clientX / window.innerWidth) * 100,
-                y: ((e.clientY + window.scrollY) / document.body.scrollHeight) * 100,
+                x: e.clientX,
+                y: e.clientY,
             });
         };
 
@@ -19,9 +19,10 @@ export default function MouseGradient() {
 
     return (
         <div
-            className="fixed inset-0 pointer-events-none z-[1] opacity-30 transition-opacity duration-500"
+            className="fixed inset-0 pointer-events-none z-[50]"
             style={{
-                background: `radial-gradient(800px circle at ${position.x}% ${position.y}%, rgba(200, 169, 110, 0.12), transparent 60%)`,
+                background: `radial-gradient(600px circle at ${position.x}px ${position.y}px, rgba(200, 169, 110, 0.07), transparent 50%)`,
+                mixBlendMode: "screen",
             }}
         />
     );
