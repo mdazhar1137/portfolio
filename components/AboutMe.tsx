@@ -232,7 +232,7 @@ export default function AboutMe() {
                 <div className="flex flex-col items-center gap-8 pt-16">
                     <div className="flex gap-10">
                         <a
-                            href="tel:+919182494402"
+                            href="tel:+919182394402"
                             className="border-2 border-[#c8a96e] text-[#c8a96e] rounded-md text-xl hover:bg-[#c8a96e]/10 transition"
                             style={{
                                 paddingTop: "8px",
